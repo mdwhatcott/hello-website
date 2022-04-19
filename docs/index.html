@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			
+			function showMadlib(){
+				var input = document.getElementById("name");
+				var name = input.value;
+
+				var player = document.getElementById("player");
+				player.innerHTML = name;
+
+				var madlib = document.getElementById("madlib");
+  				madlib.classList.remove("hidden");
+			};
+		</script>
+		<style>
+			.hidden {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>
+			Hello
+		</h1>
+		<p>
+			What is your name?
+		</p>	
+		<input id="name" type="text">
+		<button onclick="showMadlib();">
+			Submit
+		</button>
+		<p class="hidden" id="madlib">
+			Hello <span id="player">person</span>, thank you for playing!
+		</p>
+	</body>
+</html>
